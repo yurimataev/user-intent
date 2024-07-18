@@ -63,5 +63,12 @@ export default function UserIntent(cb, opts = {}) {
         }
     };
 
+    /**
+     * @returns {void}
+     */
+    this.cancel = () => {
+        eventsListenersCleanup(this.addedEvents);
+    };
+
     schema[mode].fn.call(this);
 }

@@ -343,6 +343,13 @@ function UserIntent(cb, opts = {}) {
         }
     };
 
+    /**
+     * @returns {void}
+     */
+    this.cancel = () => {
+        eventsListenersCleanup(this.addedEvents);
+    };
+
     schema$1[mode].fn.call(this);
 }
 
