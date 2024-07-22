@@ -347,6 +347,7 @@ function UserIntent(cb, opts = {}) {
      * @returns {void}
      */
     this.cancel = () => {
+        clearTimeout(this.timer);
         eventsListenersCleanup(this.addedEvents);
     };
 
