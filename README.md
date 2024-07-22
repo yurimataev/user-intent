@@ -1,6 +1,6 @@
 # User Intent (Exit Intent) 🚀
 
-Detect user intent and trigger a callback.
+Detect user intent and trigger a callback. The main change in this version from the original is that there is now a .cancel() method which allows you to disable an exit intent without triggering it.
 
 ## Usage 👨‍💻
 
@@ -18,7 +18,12 @@ const cb = (mode, opts) => {
     console.log(`Callback -> mode is "${mode}" with options of "${JSON.stringify(opts)}"`);
 };
 
-new UserIntent(cb, options);
+const ui = new UserIntent(cb, options);
+
+if (condition) {
+    ui.cancel();
+}
+
 ```
 
 ### Scroll
@@ -36,7 +41,11 @@ const cb = (mode, opts) => {
     console.log(`Callback -> mode is "${mode}" with options of "${JSON.stringify(opts)}"`);
 };
 
-new UserIntent(cb, options);
+const ui = new UserIntent(cb, options);
+
+if (condition) {
+    ui.cancel();
+}
 ```
 
 ### Target Element
@@ -54,7 +63,11 @@ const cb = (mode, opts) => {
     console.log(`Callback -> mode is "${mode}" with options of "${JSON.stringify(opts)}"`);
 };
 
-new UserIntent(cb, options);
+const ui = new UserIntent(cb, options);
+
+if (condition) {
+    ui.cancel();
+}
 ```
 
 ### Window Focus
@@ -69,7 +82,11 @@ const cb = (mode, opts) => {
     console.log(`Callback -> mode is "${mode}" with options of "${JSON.stringify(opts)}"`);
 };
 
-new UserIntent(cb, options);
+const ui = new UserIntent(cb, options);
+
+if (condition) {
+    ui.cancel();
+}
 ```
 
 ### Window Out
@@ -84,7 +101,11 @@ const cb = (mode, opts) => {
     console.log(`Callback -> mode is "${mode}" with options of "${JSON.stringify(opts)}"`);
 };
 
-new UserIntent(cb, options);
+const ui = new UserIntent(cb, options);
+
+if (condition) {
+    ui.cancel();
+}
 ```
 
 ## How to launch the project 🏁
